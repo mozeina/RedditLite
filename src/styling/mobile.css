@@ -1,0 +1,125 @@
+@media screen and (max-width: 300px) {
+    header {
+        height: 100px;
+    }
+
+    .redditLogo {
+        font-size: 3rem;
+    }
+
+    .logotitle>* {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .pageTitle {
+        font-size: 3rem;
+    }
+
+
+}
+
+@media screen and (min-width: 301px) and (max-width: 318px) {
+    header {
+        height: 100px;
+    }
+
+    .redditLogo {
+        font-size: 4rem;
+    }
+
+    .pageTitle {
+        font-size: 4rem;
+    }
+
+    .logotitle>* {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 318px) and (max-width: 576px) {
+    header {
+        height: 100px;
+    }
+
+    .redditLogo {
+        font-size: 4rem;
+    }
+
+    .pageTitle {
+        font-size: 4rem;
+    }
+
+    .logotitle>* {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 399px) and (max-width: 576px) {
+    .searchbarMobile {
+        color: rgb(14, 10, 10);
+        margin-top: 27px;
+        font-size: 30px;
+        position: absolute;
+        right: 30px;
+        padding: 5px 7px;
+
+    }
+
+    .searchbarMobile:hover {
+        color: rgb(64, 80, 64);
+        border-radius: 100%;
+    }
+
+    /* here we are going to style the searchbar in the searchpage component */
+
+}
+
+@media screen and (min-width: 0px) {
+    .searchbar-searchpage {
+        width: 70%;
+        margin: 0 auto;
+        height: 30px;
+        padding-top: 35px;
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .post-title {
+        font-size: 1rem;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .random-posts-error {
+        display: block !important;
+        margin: 0 auto !important;
+        width: 100%;
+    }
+
+    .random-posts-error>* {
+        margin: 0 auto;
+        width: 70%;
+        display: block;
+
+    }
+
+    .random-posts-error>* {
+        height: auto;
+        font-size: 1rem;
+    }
+
+    .main1 {
+        padding-top: 100px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .votes {
+        display: none;
+    }
+}

@@ -1,0 +1,56 @@
+@media screen and (min-width: 1400px) {
+    .post1 {
+        max-width: 50% !important;
+    }
+    .comments {
+        max-width: 50% !important;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .sidebar {
+        background-color: rgb(211, 211, 211);
+        width: 13%;
+        height: 100%;
+        z-index: 100;
+        display: block;
+        border-right: black solid 3px;
+        border-top: black solid 3px;
+        border-radius: 3px; 
+        position:fixed; 
+        top: 75px;
+    
+    }
+    /* .fixed-sidebar{
+        position: fixed;
+        top: 0;
+        background-color: rgb(211, 211, 211);
+        width: 13%;
+        height: 100%;
+        z-index: 100;
+
+        border-right: black solid 3px;
+        border-top: black solid 3px;
+        border-radius: 3px; 
+    } */
+}
+@media screen and (min-width : 1150px) {
+        .header{
+            position: fixed;
+            z-index: 1000;
+            width: 100%;
+        }.main-feed {
+            margin-top: 100px;
+        }
+        .navlink-likedposts{
+            width: 60%;
+            margin: 20px auto;
+            border: solid black 2px;
+            border-radius: 3px;
+            text-align: center;
+            color: black;
+        }
+        .navlink-likedposts > *:visited{
+            color: black;
+        }
+}

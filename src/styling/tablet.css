@@ -1,0 +1,29 @@
+@media screen and (min-width: 577px) and (max-width: 767px) {
+    header{
+        height: 125px;
+    }
+    .pageTitle {
+        font-size: 4.3rem;
+        padding-top: 5px;
+    }
+    .redditLogo{
+        width: 100px;
+        height: 75px;      
+        margin-bottom: 15px;
+        margin-left: 10px;
+    }
+    .logotitle  > *{
+
+        margin-top: 20px;
+        padding-bottom: 10px;
+    }
+    .searchbarTabletDesktop {
+        margin-top: 50px;
+        position: absolute;
+        width: 30%;
+        right: 5%;
+        
+    }
+    
+}
+
