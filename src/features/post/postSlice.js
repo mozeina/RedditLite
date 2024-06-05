@@ -1,19 +1,15 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { useSelector } from "react-redux";
 import axios from "axios";
-
 //HERE I THINK WE JUST NEED TO FETCH THE COMMENTS
 
 export const getCommentsForPost = createAsyncThunk('comments/fetchComments', async (post) => {
     try {
-        // console.log(post) //FOR DEBUGGIN
         let response = await axios.get(`/api/post/comments?postId=${post.data.id}&subreddit=${post.data.subreddit}`);
-        console.log(response.data);
+        console.log(response.data)
         return response.data;           
     } catch (err) {
         throw Error(err.message);
     }
-
 })
 
 

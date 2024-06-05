@@ -67,6 +67,7 @@ function Post() {
   useEffect(() => {
     if (post) {
       dispatch(getCommentsForPost(post));
+      console.log(comments, error, isLoading);
     }
   }, [post])
 
@@ -228,7 +229,7 @@ function Post() {
       {/* IF LOADING FINISHED AND THERE WAS AN ERROR  */}
       {!comments && !isLoading && error && (
         <div className='comments'>
-          <h3 className='comments-error nunito-sans'>Failed to load comments</h3>
+          <h3 className='comments-error nunito-sans' style={{margin: 20}}>Error: Failed to load comments</h3>
         </div>
       )}
 
