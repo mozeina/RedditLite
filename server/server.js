@@ -6,7 +6,11 @@ const port = process.env.PORT || 3001;
 const app = express();
 
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://redditliteproj-03605edb5bb9.herokuapp.com',
+    optionsSuccessStatus: 200
+}));
+
 
 
 app.get('/api/randomPosts', async (req, res) => {
