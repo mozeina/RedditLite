@@ -3,7 +3,7 @@ import axios from "axios";
 
 export let getRandomPosts = createAsyncThunk('/api/getRandomPosts', async () => {
     try {
-        let response = await axios.get(`api/randomPosts`);
+        let response = await axios.get(`/api/randomPosts`);
         // console.log(response.data);
         return response.data;
     } catch (err) {

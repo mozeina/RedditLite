@@ -36,29 +36,32 @@ app.get('/api/randomPosts', async (req, res) => {
         'getmotivated',
 
     ];
+    console.log('are we entering here')
     let postsArray = [];
     let idsArray = [];
     try {
         const ourUrl = process.env.REACT_APP_REDDIT_API_URL || 'https://www.reddit.com/'
-        for (let i  = 0; i < 15; i ++){
+        for (let i = 0; i < 15; i++) {
             const response = await axios.get(`${ourUrl}r/${subredditNames[Math.floor(Math.random() * subredditNames.length)]}.json?sort=random&limit=1&raw_json=1`);
             const post = response.data.data.children[0];
-            
-            if(!idsArray.includes(post.data.id)){
+
+            if (!idsArray.includes(post.data.id)) {
                 postsArray.push(post);
                 idsArray.push(post.data.id);
             }
         }
         res.json(postsArray);
 
+
     } catch (err) {
+        
         console.error(err);
         res.status(500).json({ "Error": "Bro please fix yo shit" });
     }
 });
 
 app.get('/api/post/comments', async (req, res) => {
-    const { postId, subreddit } = req.query; 
+    const { postId, subreddit } = req.query;
     const ourUrl = process.env.REACT_APP_REDDIT_API_URL || 'https://www.reddit.com/'
     try {
         let response = await axios.get(`${ourUrl}r/${subreddit}/comments/${postId}.json`);
